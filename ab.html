@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>tinDog</title>
+	<style>
+	     *{
+	     	/*margin: 0px;
+	     	padding: 0px;*/
+	     	scroll-behavior: smooth;
+	     }
+		.navbar{
+			display: flex;
+			position: relative;
+            top: 0px;
+            background-color: #fd8077;
+            height: 400px;
+		}
+		.left h2{
+			font-family: monospace;
+			font-size: 38px;
+			color: white;
+			margin: 25px 35px;
+            padding: 20px;
+		}
+		.right{
+			right: 35px;
+			top: 10px;
+			position: absolute;
+		}
+		.right ul{
+			display: flex;
+			margin: 40px 25px;
+        }
+        .right li{
+        	list-style-type: none;
+        }
+        .right li a{
+        	text-decoration: none;
+        	font-size: 20px;
+        	font-family: monospace;
+        	color: white;
+        	padding: 5px 5px;
+        	margin: 10px 10px;
+        }
+        .right li a:hover{
+        	color: papayawhip;
+        	}
+        	.container{
+        		display: flex;
+        		margin: 120px 20px;
+        	}
+        	.container h2{
+        		color: white;
+        		font-size: 38px;
+        		font-family: serif;
+        		text-align: left;
+        		width: 300px;
+        		padding: 10px 10px;
+        		margin: 0px 10px;
+        	}
+        	.container img{
+        		width: 320px;
+        		height: 250px;
+        		margin: 0px 15px;
+        		border-radius: 15px;
+        	}
+        	#use{
+        		display: flex;
+        		width: 33% auto;
+        		margin: 100px 25px;
+        	}
+        	
+        	#use .box{
+        		width: 33%;
+        		padding: 15px 15px;
+        	}
+        	#use .box img{
+        		width: 200px;
+        		height: 135px;
+        		align-items: center;
+        		display: block;
+        		margin: auto;
+        		padding: 10px;
+        	}
+        	.box h2{
+        		font-size: 28px;
+        		text-align: center;
+        	}
+        	.box p{
+        		font-size: 20px;
+        		text-align: center;
+        	}
+        	#btn{
+                padding: 10px;
+                color: white;
+                background-color: #fd8077;
+                border: 2px solid black;
+                border-radius: 10px;
+                min-width: 100%;
+                cursor: pointer;
+            }
+            .dropdown {
+                 position: relative;
+                 display: inline-block;
+				 width: 100%;
+             } 
+
+           .dropdown-content {
+                  display: none;
+                  position: absolute;
+                  background-color: #f1f1f1;
+                  width: 100%;
+                  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                  z-index: 1;
+             }
+
+            .dropdown-content a {
+                    color: black;
+                    padding: 12px 16px;
+                    text-decoration: none;
+                    display: block;
+             }
+           .dropdown-content a:hover {background-color: #ddd;}
+
+           .dropdown:hover .dropdown-content {display: block;}
+
+           .dropdown:hover .dropbtn {background-color: #3e8e41;}
+        	#featurebox{
+                background-color:#fd8077 ;
+                height: 770px;
+        	}
+        	.box1{
+        		border: 2px dashed white;
+        		border-radius: 10px;
+        		margin: 10px 10px;
+        		padding: 10px 10px;
+        	}
+        	.box1 p{
+        		font-size: 40px;
+        		text-align: center;
+        		color: white;
+        		font-family: cursive;
+        		margin: 10px 10px;
+        		padding: 20px 95px;
+        	}
+        	.box1 img{
+        		align-items: center;
+        		display: block;
+        		margin: auto;
+                width: 110px;
+                height: 120px;
+                border-radius:50px;
+        	}
+        	#pricing{
+        		margin: 10px 10px;
+        		padding: 50px;
+
+        	}
+        	#pricing h1{
+        		font-size: 40px;
+        		font-family: sans-serif;
+        		text-align: center;
+                font-weight: bolder;
+        	}
+        	#pricing h2{
+        		font-size: 24px;
+        		font-family: serif;
+        		text-align: center;
+        		font-weight: bold;
+        	}
+        	#pricing .cont{
+        		display: flex;
+        		align-items: center;
+        		justify-content: center;
+        	}
+        	#pricing .box2{
+        		margin: 20px 60px;
+        		padding: 10px 10px;
+                border: 2px solid #e9dede;
+                width: 250px;
+                background-color: #f7fbf7;
+        	}
+        	#pricing .box2 h3{
+        		font-size: 36px;
+        		font-family: monospace;
+        		font-weight: bold;
+        		text-align: center;
+        	}
+        	#pricing .box2 h4{
+        		font-size: 20px;
+        		font-family: serif;
+        		text-align: center;
+        		color: gray;
+        	}
+        	#pricing .box2 .btn1{
+        		padding: 10px;
+                color: black;
+                background-color: white;
+                border: 2px solid black;
+                border-radius: 10px;
+                display: block;
+                margin: auto;
+                cursor: pointer;
+        	}
+        	#pricing .box2 .btn1:hover{
+                background-color: black;
+                color: white;
+        	}
+        	#download{
+        		background-color:#fd8077 ;
+        		height: 300px;
+        		border: 2px dotted white;
+        	}
+        	#download h1{
+        		color: white;
+        		font-size: 36px;
+        		font-family: cursive;
+        		text-align: center;
+        		margin: 10px 200px;
+        		padding: 50px 60px;
+        	}
+        	#download .btn1{
+        	    padding: 10px;
+                color: white;
+                background-color: black;
+                border: 2px solid black;
+                border-radius: 10px;
+                display: block;
+                margin: auto;
+                cursor: pointer;
+                width: 200px;
+        	}
+        	#download .btn1:hover{
+        		background-color: white;
+                color: black;
+        	}
+        	#contact h2{
+    		text-align: center;
+    		font-size: 38px;
+    		font-family: monospace;
+    		/* background-color: ; */
+    		margin: 3px;
+    		padding: 15px;
+    	}
+    	#contact-box{
+    		display: flex;
+    		align-items: center;
+    		justify-content: center;
+    		padding: 34px;
+    	}
+    	#contact-box input,textarea{
+    		padding: 5px;
+    		border-radius: 10px;
+    		font-size: 14px;
+    		width: 100%;
+    	}
+    	#contact-box form{
+            width: 45%;
+    	}
+    	#contact-box label{
+    		font-size: 14px;
+    		font-family: italic;
+
+    	}
+    	#contact-box .btn{
+    		width: 60%;
+    		margin: 20px 105px;
+    		background-color: #cfc6c5;
+			color: black;
+    		border-radius: 10px;
+    	}
+		#contact-box .btn:hover{
+			background-color: #fd8077;
+			color: white;
+		}
+    	 footer{
+           background: #fd8077;
+           color: white;
+           padding: 9px 20px;
+           text-align: center;
+           height: 50px;
+           font-size: 24px;
+           border: 2px dotted white;
+         }
+        	</style>
+</head>
+<body>
+    <nav class="navbar">
+    	<div class="left">
+    		<h2>tinDog</h2>
+    	</div>
+    	<div class="right">
+    		<ul>
+    		<li><a href="#pricing">PRICING</a></li>
+    		<li><a href="#download">DOWNLOAD</a></li>
+    		<li><a href="#contact">CONTACT</a></li>
+    	</ul>
+    	</div>
+    	<div class="container">
+    		<h2>MEET NEW AND INTERESTING DOGS NEARBY</h2>
+    		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJBfDv95O90AAgkAESeeEls7DgKn838gURGA&usqp=CAU">
+    	</div>
+    </nav>
+    <section id="use">
+    	<div class="box">
+    		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkJe48klSYfwDJDQJ6HXdmDnHccE6hUkMvgw&usqp=CAU">
+    		<h2>EASY TO USE</h2>
+    		<p>So easy to use, even your dog could use it</p>
+    	</div>
+    	<div class="box">
+    		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1l_BTAf1zhHCps4ZaeG-6Sgf-kIVm17JzFg&usqp=CAU">
+    		<h2>ELITE CLIENTELE</h2>
+    		<p>We have all the dogs, the greatest dogs</p>
+    	</div>
+    	<div class="box">
+    		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7k9ocstLBa070ky_xuLOcFryJEvn5O2KCtA&usqp=CAU">
+    		<h2>GUARENTEED WORK</h2>
+    		<p>Find the love of your dogs life or get your money back</p>
+    	</div>
+    </section>
+    <div class="dropdown">
+    <button id="btn" onclick ="hide()">TESTIMONIALS</button>
+    <div class="dropdown-content">
+    <a href="#">LISTED TESTIMONIALS</a>
+    <a href="#">TESTIMONIAL ADDITION</a>
+    <a href="#">TESTIMONIALS SELECTION</a>
+  </div>
+    </div>
+    <section id="featurebox">
+    	<div class="box1">
+    		<p>I NO LONGER HAVE TO SNIFF OTHER DOGS FOR LOVE.I HAVE FOUND THE HOTTEST CORGI ON TINDOG.WOOF.</p>
+    		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkVmXr28usuQyn2VTvvA1pOopLkMWz_J-85g&usqp=CAU">
+    	</div>
+    	<div class="box1">
+    		<p>MY DOG USED TO BE SO LONELY,BUT WITH TINDOGS HELP, THEY HAVE THE LOVE OF THEIR LIFE.I THINK.</p>
+    		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVE9ymfv8aYV4T_H3HLpUJMWz1OYHyLyfA5A&usqp=CAU">
+    	</div>
+    </section>
+    <section id="pricing">
+    	<h1>A PLAN FOR EVERY DOGS NEED</h1>
+    	<h2>Simple and Affordable plans for you and your dog</h3>
+    	<div class="cont">
+    		<div class="box2">
+    		<h2>Chihuahua</h2>
+    		<hr>
+    		<h3>FREE</h1>
+    		<h4>5 Matches per day</h4>
+    		<h4>10 Messages per day</h4>
+            <h4>Unlimited app usage</h4>
+            <button class="btn1">SIGN UP</button>
+    	</div>
+    	<div class="box2">
+    		<h2>Labrador</h2>
+    		<hr>
+    		<h3>$49/mo</h1>
+    		<h4>Unlimited Matches</h4>
+    		<h4>Unlimited Messages</h4>
+            <h4>Unlimited app usage</h4>
+            <button class="btn1">SIGN UP</button>
+    	</div>
+    	<div class="box2">
+    		<h2>Mastiff</h2>
+    		<hr>
+    		<h3>$99/mo</h1>
+    		<h4>Priority Matches</h4>
+    		<h4>Unlimited Messages</h4>
+            <h4>Unlimited app usage</h4>
+            <button class="btn1">SIGN UP</button>
+    	</div>
+    	</div>
+    </section>
+    <section id="download">
+    	<h1>FIND THE TRUE LOVE OF YOUR DOGS LIFE TODAY</h1>
+    	<button class="btn1">DOWNLOAD</button>
+    </section>
+     <section id="contact">
+     	<h2>CONTACT DETAILS</h2>
+     	<div id="contact-box">
+     		<form action="">
+     			<div class="form-group">
+     				<label for="name">NAME</label>
+     				<input type="text" name="name" id="name" placeholder="ENTER NAME">
+     			</div>
+     			<div class="form-group">
+     				<label for="email">EMAIL US</label>
+     				<input type="text" name="name" id="email" placeholder="ENTER EMAIL ADDRESS">
+     			</div>
+     			<div class="form-group">
+     				<label for="name">PHONE NUMBER</label>
+     				<input type="text" name="name" id="phone number" placeholder="ENTER YOUR PHONE NUMBER">
+     			</div>
+     			<div class="form-group">
+    				<label for="name">MESSAGE: </label>
+    				<textarea name="message" id="message" cols="30" rows="10"></textarea>
+    			</div>
+    			<button class="btn">SUBMIT</button>
+     		</form>
+     	</div>
+     </section>
+     <footer>
+     	<div >
+            Copyright &copy; www.tinDog.com. All rights reserved!
+        </div>
+     </footer>
+</body>
+<script>
+  
+  function hide(){
+    let btn = document.getElementById('btn');
+    let featurebox = document.getElementById('featurebox');
+    if (featurebox.style.display != 'none') {
+      featurebox.style.display = 'none';
+       }
+       else{
+        featurebox.style.display = 'block';
+      }
+    }
+</script>
+</html>
